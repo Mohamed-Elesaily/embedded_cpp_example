@@ -1,0 +1,7 @@
+/Debug
+/Drivers
+.cproject
+.mxproject
+BLE Debug.launch
+BLE.ioc
+STM32F103C8TX_FLASH.ld

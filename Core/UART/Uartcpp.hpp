@@ -5,7 +5,8 @@
 
 class Uart{
     private:
-        UART_HandleTypeDef* huart;
+       UART_HandleTypeDef huart;
+        uint8_t recieveByte;
         
     public:
         Uart();
@@ -29,6 +30,11 @@ class Uart{
 
         uint8_t uartInit();
 
+        uint8_t* recieveByteAddress();
+        uint8_t  getRecieveByte();
+
+    friend
+    void USART2_IRQHandler(void);
 };
 
 

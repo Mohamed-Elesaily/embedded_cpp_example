@@ -23,7 +23,6 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/LED/LED.hpp \
- /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/BLE/BLE.hpp \
  /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp
 
 ../Core/Inc/main.h:
@@ -75,7 +74,5 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 
 /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/LED/LED.hpp:
-
-/home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/BLE/BLE.hpp:
 
 /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp:

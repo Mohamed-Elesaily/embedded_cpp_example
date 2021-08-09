@@ -1,8 +1,8 @@
 #include "main.h"
 #include"LED.hpp"
-#include"BLE.hpp"
-
-BLE ble;
+#include"Uartcpp.hpp"
+UART_HandleTypeDef* huart2;
+Uart uart;
 int main(void)
 {
 
@@ -13,15 +13,18 @@ int main(void)
 
   Led led;
 
+  uart.uartBaudRate(9600);
+  uart.uartPeripheral(2);
 
+  huart2 = uart.getUartHandler();
     while (1)
     {
-        if(*ble.receiveByte() == 'S')
+        if(uart.getRecieveByte() == 'S')
         {
         	led.led_on();
 
         }
-        else if(*ble.receiveByte()  == 'F')
+        else if(uart.getRecieveByte()  == 'F')
         {
             led.led_off();
         }
@@ -31,8 +34,8 @@ int main(void)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if(huart->Instance == (*ble.getUartHandler()).Instance)
+    if(huart->Instance == huart2->Instance)
     {
-    HAL_UART_Receive_IT(ble.getUartHandler(), ble.receiveByte(), 1);
+    HAL_UART_Receive_IT(huart2, uart.recieveByteAddress(), 1);
     }
 }

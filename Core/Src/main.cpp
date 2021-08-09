@@ -1,10 +1,11 @@
 #include "main.h"
+#include "cmsis_os.h"
 #include"LED.hpp"
 #include"Uartcpp.hpp"
 #include"BLE.hpp"
 UART_HandleTypeDef huart2;
 
-BLE ble;
+
 int main(void)
 {
 
@@ -14,11 +15,11 @@ int main(void)
   SystemCoreClockUpdate();
 
   Led led;
+  BLE ble;
 
-  ble.uartInit();
-  huart2 =  ble.getUartHandler();
-  ble.uartInit();
-  HAL_UART_Receive_IT(&huart2, ble.recieveByteAddress(), 1);
+  huart2 =  BLE::getUartHandler();
+  BLE::uartInit();
+  HAL_UART_Receive_IT(&huart2, BLE::recieveByteAddress(), 1);
 
     while (1)
     {
@@ -40,7 +41,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
     if(huart->Instance == huart2.Instance)
     {
-    	HAL_UART_Receive_IT(&huart2, ble.recieveByteAddress(), 1);
+    	HAL_UART_Receive_IT(&huart2, BLE::recieveByteAddress(), 1);
 
     }
 }

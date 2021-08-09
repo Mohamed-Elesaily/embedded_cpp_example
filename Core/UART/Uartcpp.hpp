@@ -6,8 +6,8 @@
 
 class Uart{
     private:
-       UART_HandleTypeDef huart;
-        uint8_t recieveByte;
+        static UART_HandleTypeDef huart;
+        static uint8_t recieveByte;
         
     public:
         Uart();
@@ -27,11 +27,11 @@ class Uart{
          * @return 1->successfully initialized 
          * */ 
 
-        UART_HandleTypeDef getUartHandler();
+        static UART_HandleTypeDef getUartHandler();
+        
+        static uint8_t uartInit();
 
-        uint8_t uartInit();
-
-        uint8_t* recieveByteAddress();
+        static uint8_t* recieveByteAddress();
         uint8_t  getRecieveByte();
 
     friend

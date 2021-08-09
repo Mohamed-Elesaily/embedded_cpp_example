@@ -1,4 +1,6 @@
 #include"Uartcpp.hpp"
+UART_HandleTypeDef Uart::huart;
+uint8_t Uart::recieveByte;
 Uart::Uart(){
   __HAL_RCC_GPIOA_CLK_ENABLE();
 	huart.Init.BaudRate = 9600;
@@ -53,3 +55,4 @@ uint8_t* Uart::recieveByteAddress(){
 uint8_t  Uart::getRecieveByte(){
     return recieveByte;
 }
+

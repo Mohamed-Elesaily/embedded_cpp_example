@@ -6,11 +6,11 @@
 class BLE: public Uart{
 
     private:
-        uint8_t * byteData;
+        uint8_t byteData;
         
     public:
-        BLE();
-        uint8_t * receiveByte();
+    
+        uint8_t receiveByte();
 
 };
 

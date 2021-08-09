@@ -2,6 +2,7 @@
 #define UART_CPP
 #include<stdint.h>
 #include "stm32f1xx_hal.h"
+#include "main.h"
 
 class Uart{
     private:
@@ -26,7 +27,7 @@ class Uart{
          * @return 1->successfully initialized 
          * */ 
 
-        UART_HandleTypeDef* getUartHandler();
+        UART_HandleTypeDef getUartHandler();
 
         uint8_t uartInit();
 

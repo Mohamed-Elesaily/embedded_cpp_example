@@ -9,7 +9,11 @@ Uart::Uart(){
     huart.Init.Mode = UART_MODE_TX_RX;
     huart.Init.HwFlowCtl = UART_HWCONTROL_NONE;
     huart.Init.OverSampling = UART_OVERSAMPLING_16;
-    HAL_UART_Init(&huart);
+    // HAL_UART_Init(&huart);
+      if (HAL_UART_Init(&huart) != HAL_OK)
+  {
+   
+  }
 }
 
 void Uart::uartBaudRate(uint16_t rate_HZ){
@@ -32,8 +36,8 @@ void Uart::uartPeripheral(uint8_t peripheral_num){
     }
     
 }
-UART_HandleTypeDef* Uart::getUartHandler(){
-    return &huart;
+UART_HandleTypeDef Uart::getUartHandler(){
+    return huart;
 }
 
 

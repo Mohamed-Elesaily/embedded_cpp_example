@@ -1,7 +1,7 @@
 Uartcpp.cpp:2:1:Uart::Uart()	24	static
-Uartcpp.cpp:15:6:void Uart::uartBaudRate(uint16_t)	16	static
-Uartcpp.cpp:18:6:void Uart::uartPeripheral(uint8_t)	32	static
-Uartcpp.cpp:35:21:UART_HandleTypeDef* Uart::getUartHandler()	16	static
-Uartcpp.cpp:40:9:uint8_t Uart::uartInit()	16	static
-Uartcpp.cpp:46:10:uint8_t* Uart::recieveByteAddress()	16	static
-Uartcpp.cpp:49:10:uint8_t Uart::getRecieveByte()	16	static
+Uartcpp.cpp:19:6:void Uart::uartBaudRate(uint16_t)	16	static
+Uartcpp.cpp:22:6:void Uart::uartPeripheral(uint8_t)	32	static
+Uartcpp.cpp:39:20:UART_HandleTypeDef Uart::getUartHandler()	16	static
+Uartcpp.cpp:44:9:uint8_t Uart::uartInit()	16	static
+Uartcpp.cpp:50:10:uint8_t* Uart::recieveByteAddress()	16	static
+Uartcpp.cpp:53:10:uint8_t Uart::getRecieveByte()	16	static

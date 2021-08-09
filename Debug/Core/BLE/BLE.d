@@ -22,7 +22,8 @@ Core/BLE/BLE.o: ../Core/BLE/BLE.cpp ../Core/BLE/BLE.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp
+ /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp \
+ ../Core/Inc/main.h
 
 ../Core/BLE/BLE.hpp:
 
@@ -73,3 +74,5 @@ Core/BLE/BLE.o: ../Core/BLE/BLE.cpp ../Core/BLE/BLE.hpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 
 /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp:
+
+../Core/Inc/main.h:

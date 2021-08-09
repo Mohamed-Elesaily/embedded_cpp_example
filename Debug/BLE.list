@@ -973,26 +973,25 @@ Uart::Uart(){
  800059a:	b084      	sub	sp, #16
  800059c:	af00      	add	r7, sp, #0
  800059e:	6078      	str	r0, [r7, #4]
-  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
  80005a0:	4b16      	ldr	r3, [pc, #88]	; (80005fc <_ZN4UartC1Ev+0x64>)
  80005a2:	699b      	ldr	r3, [r3, #24]
  80005a4:	4a15      	ldr	r2, [pc, #84]	; (80005fc <_ZN4UartC1Ev+0x64>)
- 80005a6:	f043 0308 	orr.w	r3, r3, #8
+ 80005a6:	f043 0304 	orr.w	r3, r3, #4
  80005aa:	6193      	str	r3, [r2, #24]
  80005ac:	4b13      	ldr	r3, [pc, #76]	; (80005fc <_ZN4UartC1Ev+0x64>)
  80005ae:	699b      	ldr	r3, [r3, #24]
- 80005b0:	f003 0308 	and.w	r3, r3, #8
+ 80005b0:	f003 0304 	and.w	r3, r3, #4
  80005b4:	60fb      	str	r3, [r7, #12]
  80005b6:	68fb      	ldr	r3, [r7, #12]
 	huart.Init.BaudRate = 9600;
  80005b8:	687b      	ldr	r3, [r7, #4]
  80005ba:	f44f 5216 	mov.w	r2, #9600	; 0x2580
  80005be:	605a      	str	r2, [r3, #4]
-     huart.Instance = USART2;
+    huart.Instance = USART2;
  80005c0:	687b      	ldr	r3, [r7, #4]
  80005c2:	4a0f      	ldr	r2, [pc, #60]	; (8000600 <_ZN4UartC1Ev+0x68>)
  80005c4:	601a      	str	r2, [r3, #0]
-
 	huart.Init.WordLength = UART_WORDLENGTH_8B;
  80005c6:	687b      	ldr	r3, [r7, #4]
  80005c8:	2200      	movs	r2, #0

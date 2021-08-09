@@ -1,9 +1,8 @@
 #include"Uartcpp.hpp"
 Uart::Uart(){
-  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 	huart.Init.BaudRate = 9600;
-     huart.Instance = USART2;
-
+    huart.Instance = USART2;
 	huart.Init.WordLength = UART_WORDLENGTH_8B;
     huart.Init.StopBits = UART_STOPBITS_1;
     huart.Init.Parity = UART_PARITY_NONE;

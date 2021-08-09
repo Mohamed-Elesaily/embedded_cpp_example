@@ -4,8 +4,6 @@
 #include"Uartcpp.hpp"
 #include"BLE.hpp"
 UART_HandleTypeDef huart2;
-
-
 int main(void)
 {
 
@@ -37,11 +35,3 @@ int main(void)
 }
 
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if(huart->Instance == huart2.Instance)
-    {
-    	HAL_UART_Receive_IT(&huart2, BLE::recieveByteAddress(), 1);
-
-    }
-}

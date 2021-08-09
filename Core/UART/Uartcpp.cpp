@@ -22,20 +22,17 @@ void Uart::uartBaudRate(uint16_t rate_HZ){
     huart.Init.BaudRate = 9600;
 }
 void Uart::uartPeripheral(uint8_t peripheral_num){
-    switch (peripheral_num)
-    {
-    case '1':
+    #if peripheral_num == 1
         huart.Instance = USART1;
         __HAL_RCC_GPIOA_CLK_ENABLE();
-        break;
-    case '2':
+    #elif peripheral_num == 2
         huart.Instance = USART2;
         __HAL_RCC_GPIOB_CLK_ENABLE();
-    default:
+    #else
        huart.Instance = USART3;
         __HAL_RCC_GPIOA_CLK_ENABLE();
-        break;
-    }
+    #endif   
+    
     
 }
 UART_HandleTypeDef Uart::getUartHandler(){

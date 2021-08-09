@@ -23,6 +23,7 @@
 #include "stm32f1xx_it.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include"BLE.hpp"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -195,6 +196,15 @@ void USART2_IRQHandler(void)
   /* USER CODE BEGIN USART2_IRQn 1 */
 
   /* USER CODE END USART2_IRQn 1 */
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if(huart->Instance == huart2.Instance)
+    {
+    	HAL_UART_Receive_IT(&huart2, BLE::recieveByteAddress(), 1);
+
+    }
 }
 
 /* USER CODE BEGIN 1 */

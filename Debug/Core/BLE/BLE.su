@@ -1,0 +1,2 @@
+BLE.cpp:3:1:BLE::BLE()	16	static
+BLE.cpp:10:11:uint8_t* BLE::receiveByte()	16	static

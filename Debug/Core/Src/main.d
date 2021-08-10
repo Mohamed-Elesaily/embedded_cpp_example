@@ -33,7 +33,9 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/LED/LED.hpp \
  /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp \
- /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/BLE/BLE.hpp
+ /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/BLE/BLE.hpp \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 
 ../Core/Inc/main.h:
 
@@ -106,3 +108,7 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/UART/Uartcpp.hpp:
 
 /home/msm/STM32CubeIDE/workspace_1.6.1/BLE/Core/BLE/BLE.hpp:
+
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+
+../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
